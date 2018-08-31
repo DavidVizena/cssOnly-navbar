@@ -25,3 +25,33 @@ body {
     padding: 10px;
     text-decoration: none;
 }
+
+.collapsible-menu label {
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 56px;
+    display: block;
+    cursor: pointer;
+    background: url(../menu.jpg) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+
+input#menu {
+    display: none;
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Oswald", sans-serif;
+    padding: 0 0 0 50px;
+}
+
+/* Toggle effect */
+
+input:checked~label {
+    background-image: url(../x.png);
+}
+
+input:checked~.menu-content {
+    max-height: 100%;
+}
